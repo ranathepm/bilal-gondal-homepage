@@ -83,9 +83,9 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(12px, 1.5vw, 24px);
+  gap: clamp(9px, 1.12vw, 18px);
   color: rgba(247, 244, 236, 0.78);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -124,6 +124,7 @@ img {
 .section-inner {
   width: min(100%, var(--max));
   margin: 0 auto;
+  min-width: 0;
 }
 
 .narrow {
@@ -173,6 +174,7 @@ h3 {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   line-height: 1.02;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -200,6 +202,7 @@ h3 {
   margin: 28px 0 0;
   color: rgba(247, 244, 236, 0.82);
   font-size: clamp(1.05rem, 2vw, 1.45rem);
+  overflow-wrap: anywhere;
 }
 
 .hero-actions {
@@ -524,6 +527,134 @@ h3 {
   background: #151515;
 }
 
+.cinematics-section,
+.cinematics-hero {
+  background:
+    linear-gradient(135deg, rgba(200, 164, 93, 0.12), transparent 42%),
+    #111111;
+}
+
+.cinematics-page .site-header + main {
+  padding-top: 0;
+}
+
+.cinematics-hero {
+  min-height: 74vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.cinematics-hero h1 {
+  font-size: clamp(4rem, 11vw, 10rem);
+}
+
+.media-lab {
+  background: var(--charcoal);
+}
+
+.media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.72fr);
+  gap: clamp(30px, 6vw, 76px);
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.media-note {
+  max-width: 720px;
+  color: rgba(247, 244, 236, 0.76);
+  font-size: 1.05rem;
+}
+
+.upload-panel {
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: rgba(17, 17, 17, 0.42);
+}
+
+.upload-drop {
+  display: grid;
+  gap: 12px;
+  min-height: 260px;
+  place-items: center;
+  padding: 24px;
+  border: 1px dashed rgba(200, 164, 93, 0.55);
+  background: rgba(200, 164, 93, 0.07);
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-drop input {
+  width: 100%;
+  max-width: 250px;
+  color: rgba(247, 244, 236, 0.72);
+}
+
+.upload-drop span,
+.upload-drop small {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.upload-drop strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.upload-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.media-placeholder,
+.media-item {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.media-placeholder span,
+.media-item span {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.media-placeholder p,
+.media-item p {
+  color: rgba(247, 244, 236, 0.72);
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0b0b0b;
+}
+
+.media-item h3 {
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+
 .insight-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -670,6 +801,7 @@ h3 {
   .principles,
   .law-layout,
   .books-grid,
+  .media-layout,
   .contact-layout {
     grid-template-columns: 1fr;
   }
@@ -690,6 +822,7 @@ h3 {
   .expertise-grid,
   .case-grid,
   .insight-grid,
+  .media-grid,
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -701,6 +834,16 @@ h3 {
 
   .book-cover {
     width: 180px;
+  }
+
+  .cinematics-page .hero-lede,
+  .cinematics-page .media-note {
+    max-width: min(100%, 260px);
+    font-size: 1rem;
+  }
+
+  .cinematics-hero h1 {
+    font-size: clamp(3.3rem, 14vw, 4rem);
   }
 
   .venture-table {
@@ -742,6 +885,19 @@ h3 {
     font-size: clamp(3.05rem, 15vw, 4rem);
   }
 
+  h2 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+  }
+
+  .cinematics-hero h1 {
+    font-size: clamp(3.3rem, 14vw, 4rem);
+  }
+
+  .cinematics-page .hero-lede,
+  .cinematics-page .media-note {
+    max-width: calc(100vw - 64px);
+  }
+
   .hero-copy {
     min-width: 0;
     width: 100%;
@@ -781,6 +937,7 @@ h3 {
   .expertise-grid,
   .case-grid,
   .insight-grid,
+  .media-grid,
   .metrics-grid,
   .principles ol {
     grid-template-columns: 1fr;

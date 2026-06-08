@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cinematics media page for The Bilal Gondal brand.">
+  <title>Cinematics | The Bilal Gondal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="The Bilal Gondal home">
+      <span class="brand-mark">BG</span>
+      <span>TheBilalGondal.com</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#about">THE ARCHITECT</a>
+      <a href="index.html#sales">FRAMEWORKS</a>
+      <a href="index.html#books">THE BLUEPRINTS</a>
+      <a href="index.html#ventures">Ventures</a>
+      <a href="index.html#insights">Insights</a>
+      <a href="index.html#law">Legal</a>
+      <a href="index.html#achievements">Achievements</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="cinematics.html">Cinematics</a>
+    </nav>
+  </header>
+
+  <main class="cinematics-page">
+    <section class="section-band cinematics-hero">
+      <div class="section-inner">
+        <p class="section-kicker">Cinematics</p>
+        <h1><span>VISUAL</span><span>ARCHIVE</span></h1>
+        <p class="hero-lede">A media command center for campaign footage, professional reels, event videos, interviews, talks, and visual documentation.</p>
+      </div>
+    </section>
+
+    <section class="section-band media-lab">
+      <div class="section-inner media-layout">
+        <div>
+          <p class="section-kicker">Media Uploads</p>
+          <h2>Stage videos and images before publishing.</h2>
+          <p class="media-note">Files selected here preview in your browser only. Permanent public uploads need a storage/backend connection before visitors can submit media to the live site.</p>
+        </div>
+        <form class="upload-panel">
+          <label class="upload-drop">
+            <span>Choose Media</span>
+            <input class="media-input" type="file" accept="image/*,video/*" multiple>
+            <strong>Drop images or videos into the archive</strong>
+            <small>MP4, MOV, JPG, PNG, WEBP</small>
+          </label>
+          <div class="upload-actions">
+            <button class="btn primary" type="button">Upload Media</button>
+            <button class="btn secondary clear-media" type="button">Clear Stage</button>
+          </div>
+        </form>
+      </div>
+      <div class="section-inner">
+        <div class="media-grid" aria-live="polite">
+          <article class="media-placeholder">
+            <span>01</span>
+            <h3>Campaign Films</h3>
+            <p>Brand reels, launch footage, and high-impact positioning media.</p>
+          </article>
+          <article class="media-placeholder">
+            <span>02</span>
+            <h3>Public Appearances</h3>
+            <p>Speaking clips, interviews, conferences, and executive forums.</p>
+          </article>
+          <article class="media-placeholder">
+            <span>03</span>
+            <h3>Behind The Build</h3>
+            <p>Venture documentation, process footage, and milestone records.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>TheBilalGondal.com</p>
+    <p>Cinematics. Ventures. Strategy.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
