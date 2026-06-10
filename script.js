@@ -83,7 +83,7 @@ if (sliderOrbit) {
 
     const img = document.createElement("img");
     img.src = src;
-    img.alt = `Billa 47 archive photo ${index + 1}`;
+    img.alt = `BG cinematics archive photo ${index + 1}`;
     img.loading = index < 6 ? "eager" : "lazy";
 
     slide.appendChild(img);
@@ -130,7 +130,7 @@ if (cinematicGallery) {
 
     const img = document.createElement("img");
     img.src = src;
-    img.alt = `Billa 47 cinematic archive ${index + 1}`;
+    img.alt = `BG cinematic archive ${index + 1}`;
     img.loading = index < 8 ? "eager" : "lazy";
 
     const caption = document.createElement("figcaption");
